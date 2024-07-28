@@ -26,7 +26,7 @@ while (selectOption) {
     } else if (option === '1') {
         let account = findBankAccount();
         if (account) {
-            console.log(`Account found: ${account.accountName}, Balance: ${account.balance}`);
+            console.log(`Bank account: ${account.accountName}, Balance: ${account.balance}`);
         } else {
             console.log("Account not found!");
         }
@@ -51,11 +51,6 @@ function printMenu() {
 }
 
 function findBankAccount() {
-    // for(let bankAccount of bankAccounts.bankAccount){
-    //     if(bankAccount === accountNumber){
-    //         return bankAccount;
-    //     }
-    // }
     let inputAccountNumber = readline.question("Input your account number: ");
     return bankAccounts.find(bankAccount => bankAccount.accountNumber === inputAccountNumber);
 }
