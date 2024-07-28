@@ -26,6 +26,16 @@ function getInputToArray() {
     return intArray;
 }
 
+function inputAccountNumber() {
+    return readline.question("Input your account number: ")
+}
 
+function inputAccountName() {
+    return readline.question("Input your account name: ")
+}
+
+function inputAccountBalance() {
+    return readline.question("Input your account balance: ")
+}
 //Export function
-module.exports = { getWeight, getInputToArray };
+module.exports = { getWeight, getInputToArray, inputAccountNumber, inputAccountName, inputAccountBalance};
