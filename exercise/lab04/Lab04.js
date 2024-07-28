@@ -51,6 +51,11 @@ function printMenu() {
 }
 
 function findBankAccount() {
+    // for(let bankAccount of bankAccounts.bankAccount){
+    //     if(bankAccount === accountNumber){
+    //         return bankAccount;
+    //     }
+    // }
     let inputAccountNumber = readline.question("Input your account number: ");
     return bankAccounts.find(bankAccount => bankAccount.accountNumber === inputAccountNumber);
 }
@@ -58,6 +63,8 @@ function findBankAccount() {
 function withDrawMoney(bankAccount, withDrawAmount) {
     if (withDrawAmount > bankAccount.balance) {
         console.log("The balance withdraw is not correct!");
+    } else if (withDrawAmount < 0) {
+        console.log("Negative number is unacceptable!");
     } else {
         bankAccount.balance -= withDrawAmount;
         console.log(`Withdrawal successful. New balance: ${bankAccount.balance}`);
