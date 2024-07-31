@@ -10,7 +10,7 @@ function groupWords(givenString) {
 
     let wordCount = {};
     for (const word of words) {
-        if (wordCount[word] === undefined) {
+        if (!wordCount[word]) {
             wordCount[word] = 1;
         } else {
             wordCount[word] += 1;
